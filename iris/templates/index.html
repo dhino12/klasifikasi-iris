@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+  content="ie=edge">
+  <!-- Latest compiled and minified CSS -->
+<!--<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+  body{
+    margin-top: 70px;
+    background: #102133;
+    color: #fff;
+  }
+
+  .fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #8d194f;
+  color: white;
+}
+
+
+.fa-github {
+  background: #000000;
+  color: white;
+}
+
+  </style>
+
+  <title>Prediksi IRIS||DanielMorantha</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h1 class="display-4 text-center mb-3"> Klasifikasi bunga iris </h1>
+        <form
+          action="{{ url_for('predict') }}"
+          method="post"
+          class="flex flex-col"
+        >
+          <div class="form-group">
+            <label for="SepalLengthCm" class="mt-4 mb-2">Panjang Sepal</label>
+            <input 
+              name="SepalLengthCm" type="number"
+              id="SepalLengthCm"
+              class="form-control form-control-lg mb-3"
+              placeholder="Panjang Sepal CM"
+              required="required"
+            >
+
+            <div>
+          <div class="form-group">
+            <label for="SepalWidthCm" class="mt-4 mb-2"
+            >Lebar Sepal:</label> 
+            <input 
+            name="SepalWidthCm" type="number"
+            id="SepalWidthCm"
+            class="form-control form-control-lg mb-3"
+            placeholder="Panjang Sepal CM"
+            required="required"
+          >
+
+            <label for="PetalLengthCm" class="mt-4 mb-2">Panjang Petal</label>
+            <input 
+            name="PetalLengthCm" type="number"
+            id="PetalLengthCm"
+            class="form-control form-control-lg mb-3"
+            placeholder="Panjang Petal CM"
+            required="required"
+            >
+
+            <label for="PetalWidthCm" class="mt-4 mb-2">Lebar Petal</label>
+            <input 
+            name="PetalWidthCm" type="number"
+            id="PetalWidthCm"
+            class="form-control form-control-lg mb-3"
+            placeholder="Lebar Petal CM"
+            required="required"
+            >
+    
+                <div>
+                  <button type="submit" class="btn btn-primary">PREDIKSI SEKARANG</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <section class="mt-8 h-full flex-auto rounded-lg md:mt-0 md:ml-8">
+      <div class="bg-white p-16 rounded-lg">
+          <h1 class="text-2xl mb-8">
+            Klasifikasi Iris
+          </h1>
+          <div class="card-body">
+            <form action="{{ url_for('predict') }}" method="POST">
+                <!-- Result -->
+                <div>
+                    <h2> {{prediction_text}}</h2>
+                </div>
+            </form>
+
+  <footer class="bg-dark text-center text-white">
+
+    <div class="container p-4 pb-0">
+
+      <section class="mb-4">
+
+
+    <a href="https://www.youtube.com/channel/UCyKaSpkGfd66vZVCIOw4Hlw" class="fa fa-youtube"></a>
+    <a href="https://www.instagram.com/danielmrnth12/" class="fa fa-instagram"></a>
+    <a href="https://github.com/Danielmorantha" class="fa fa-github"></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+      <a class="text-white">Daniel Morantha (2019230088)</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+  
+
+
+</body>
+</html>
